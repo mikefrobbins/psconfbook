@@ -1,0 +1,64 @@
+{
+  "cars": [
+    {
+      "manufacturer": "Ford",
+      "model": "Mustang",
+      "modelyear": "1965",
+      "DateAdded": "1/1/2018",
+      "id": 1
+    },
+    {
+      "manufacturer": "Chevrolet",
+      "model": "Corvette",
+      "modelyear": "1952",
+      "DateAdded": "12/25/2017",
+      "id": 2
+    },
+    {
+      "manufacturer": "Tesla",
+      "modelyear": 2017,
+      "model": "P90D",
+      "dateadded": "1/1/2017",
+      "id": 3
+    }
+  ],
+  "customers": [
+    {
+      "lastvisit": "1/1/2018",
+      "cars": [
+        1,
+        2
+      ],
+      "name": "Jeremy Murrah",
+      "id": 1
+    },
+    {
+      "name": "John Smith",
+      "id": 2,
+      "cars": [
+        3
+      ],
+      "lastvisit": "1/1/2017"
+    }
+  ],
+  "servicetickets": [
+    {
+      "id": 1,
+      "customer": 1,
+      "car": 2,
+      "issue": "rough idle",
+      "status": "closed",
+      "dateentered": "5/1/2018",
+      "dateclosed": "5/5/2018"
+    },
+    {
+      "id": 2,
+      "car": 3,
+      "dateclosed": "0",
+      "customer": 2,
+      "dateentered": "1/1/2017",
+      "issue": "car is too fast!",
+      "status": "working"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+  <Name>Custom.Encoded</Name>
+  <Members>
+    <ScriptProperty>
+      <Name>EncodedCommand</Name>
+      <GetScriptBlock>
+        [convert]::ToBase64String(
+        [System.Text.Encoding]::Unicode.GetBytes($this.String))
+     </GetScriptBlock>
+    </ScriptProperty>
+  </Members>
+  </Type>
+</Types>

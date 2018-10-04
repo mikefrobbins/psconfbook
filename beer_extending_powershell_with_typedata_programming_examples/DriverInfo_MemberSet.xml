@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+   <Type>
+        <Name>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapter</Name>
+         <Members>
+            <PropertySet>
+                <Name>DriverInfo</Name>
+                <ReferencedProperties>
+                    <Name>InterfaceDescription</Name>
+                    <Name>DriverFileName</Name>
+                    <Name>DriverVersion</Name>
+                    <Name>DriverInformation</Name>
+                </ReferencedProperties>
+            </PropertySet>
+        </Members>
+    </Type>
+</Types>

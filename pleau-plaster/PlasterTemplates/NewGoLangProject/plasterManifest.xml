@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest schemaVersion="1.1" templateType="Project" 
+  xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>NewGoLangProject</name>
+    <id>cb4537f4-f8a1-419a-8c5c-847e0e57a810</id>
+    <version>0.0.1</version>
+    <title>Go Project</title>
+    <description>Basic scaffolding for a simple Go project.</description>
+    <author>Rob</author>
+    <tags>Go</tags>
+  </metadata>
+  <parameters>
+    <parameter name="ProjectName" type="text" prompt="Enter the name of your project" />
+    <parameter name="MainPackage" type="choice" prompt="Are you creating the main package (entry point) or a new package?" default='0'>
+      <choice label="&amp;Main" help="Creates the 'main' package, this is the entry point and needs to be the first package." value="Main" />
+      <choice label="&amp;Secondary" help="The main package is already created and I am creating a seconary pacakge for this project." value="Secondary" />
+    </parameter>
+    <parameter name="Imports" type="multichoice" prompt="Which base common Go packages will you be using?" default='0'>
+      <choice label="&amp;fmt" help="The 'fmt' package for formatting." value="fmt" />
+      <choice label="&amp;os" help="The 'os' package for operating system functionality, typically file and folder operations." value="os" />
+      <choice label="&amp;time" help="The 'time' package for date and time usage." value="time" />
+    </parameter>
+  </parameters>
+  <content>
+    <message>&#10;&#10;Scaffolding your Go project!&#10;&#10;&#10;</message>
+    <message> Creating root folder for package: $PLASTER_PARAM_ProjectName </message>
+    <file destination='${PLASTER_PARAM_ProjectName}\' source='' />
+    <templateFile source='template.go.ps1' destination='${PLASTER_PARAM_ProjectName}\${PLASTER_PARAM_ProjectName}.go' />
+  </content>
+</plasterManifest>

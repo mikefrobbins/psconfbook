@@ -1,0 +1,84 @@
+{
+    "Plaster-Parameter-Text": {
+        "scope": "xml",
+        "prefix": "Plaster-Parameter-Text",
+        "body": [
+            "<parameter name='$1' type='text' prompt='${2:Prompt the user will be presented.}' default='${3:DefaultValue}'/>$0"
+        ],
+        "description": "A Plaster text parameter."
+    },
+    "Plaster-Parameter-Choice": {
+        "scope": "xml",
+        "prefix": "Plaster-Parameter-Choice",
+        "body": [
+            "<parameter name='$1' type='choice' prompt='${2:Prompt the user will be presented.}' default='0'>",
+            "   <choice label='&amp;Yes' help='${3:Help label for option 1}' value='Yes' />",
+            "   <choice label='&amp;No' help='${4:Help label for option 2}' value='No' />",
+            "</parameter>$0"
+        ],
+        "description": "A Plaster choice parameter."
+    },
+    "Plaster-Parameter-Multichoice": {
+        "scope": "xml",
+        "prefix": "Plaster-Parameter-Multichoice",
+        "body": [
+            "<parameter name='$1' type='multichoice' default='0,1,2' store='text' prompt='${2:Prompt the user will be presented.}'>",
+            "   <choice label='&amp;${3:Choice 1 label user will see.}'",
+            "       help='${4:Choice 1 help label.}'",
+            "       value='$5'/>",
+            "   <choice label='&amp;${6:Choice 2 label user will see.}'",
+            "       help='${7:Choice 2 help label.}'",
+            "       value='$8'/>",
+            "   <choice label='&amp;${9:Choice 3 label user will see.}'",
+            "       help='${10:Choice 3 help label.}'",
+            "       value='$11'/>",
+            "</parameter>$0"
+        ],
+        "description": "A Plaster multi choice parameter.",
+    },
+    "Plaster-Content-Message": {
+        "scope": "xml",
+        "prefix": "Plaster-Content-Message",
+        "body": [
+            "<message>${1:Message user will see.}</message>$0"
+        ],
+        "description": "A Plaster message for content."
+    },
+    "Plaster-Content-File": {
+        "scope": "xml",
+        "prefix": "Plaster-Content-File",
+        "body": [
+            "<file source='${1:SourceFile}'",
+            "   destination='${2:Destination file name}'",
+            "   condition='${3:Condition}'/>$0",
+        ],
+        "description": "A Plaster file snippet, includes condition which can be deleted."
+    },
+    "Plaster-Content-Templatefile": {
+        "scope": "xml",
+        "prefix": "Plaster-Content-Templatefile",
+        "body": [
+            "<templateFile source='${1:Source template file}'",
+            "   destination='${2:Destination file name}'",
+            "   condition='${3:Condition}'/>$0",
+        ],
+        "description": "A Plaster templatefile snippet, includes condition which can be deleted."
+    },
+    "Plaster-Content-RequireModule": {
+        "scope": "xml",
+        "prefix": "Plaster-Content-RequireModule",
+        "body": [
+            "<requireModule name='${1:Required Module Name}' minimumVersion='${2:Required Module Version}'",
+            "message='${3:Message to the user.}'/>$0"
+        ],
+        "description": "A Plaster templatefile snippet, includes condition which can be deleted."
+    },
+    "Plaster-Content-NewModuleManifest": {
+        "scope": "xml",
+        "prefix": "Plaster-Content-NewModuleManifest",
+        "body": [
+            "<newModuleManifest destination='${PLASTER_PARAM_ModuleName}.psd1'/>$0"
+        ],
+        "description": "A Plaster templatefile snippet, includes condition which can be deleted."
+    }
+}
